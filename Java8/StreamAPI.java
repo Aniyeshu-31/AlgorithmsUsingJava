@@ -25,7 +25,7 @@ public class StreamAPI {
     });
      IntStream intStream = Arrays.stream(new int[]{1,2,3,4,4,5,6});
 
-     stream.forEach(e->{
+     intStream.forEach(e->{
         System.out.println(e);
      });
 
@@ -49,6 +49,11 @@ public class StreamAPI {
      List<String> Names = List.of("Anil","Ankit","Ajay Suneja","Aniyeshu");
 
      List<String> StreamNames = Names.stream().filter(e -> e.startsWith("A")).collect(Collectors.toList());
+
+     List<Integer> numbers = List.of(1,2,3,4,5,6,7);
+      
+     List<Integer> squares = numbers.stream().map(i->i*i).collect(Collectors.toList());
+     System.out.println(squares);
    }    
 
 }
